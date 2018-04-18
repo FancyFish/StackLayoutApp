@@ -4,8 +4,39 @@
              xmlns:local="clr-namespace:StackLayoutApp"
              x:Class="StackLayoutApp.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout BackgroundColor="Black">
+        <BoxView
+            Color="CadetBlue"
+            HeightRequest="70">
+            
+        </BoxView>
+        <Image Source="GitHub.png"
+               WidthRequest="100"></Image>
+        <StackLayout  VerticalOptions="EndAndExpand" >
+            <Label HorizontalOptions="Center"
+                   FontSize="Large"
+                   
+                   >Nombre de Usuario</Label>
+            <TableView  BackgroundColor="CadetBlue">
+            
+            <TableSection >
+                    <EntryCell x:Name="EntryUser"
+                               Label="Usuario"
+                               
+                        ></EntryCell>
+                    <EntryCell x:Name="EntryAge"
+                               Label="Edad"
+                               
+                        ></EntryCell>
+                    <EntryCell x:Name="Entry"
+                               Label="Preferencias"
+                               
+                        ></EntryCell>
+                </TableSection>
+            
+        </TableView>
+        </StackLayout>
+        
+    </StackLayout>
 
 </ContentPage>
